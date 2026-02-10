@@ -13,20 +13,17 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # ВОТ ЭТОТ ШАГ заменяет нам файл .jar! 
-      # Он сам установит Gradle нужной версии.
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
-          gradle-version: 8.0 
+          gradle-version: "8.5"
 
-      # Теперь запускаем сборку не через ./gradlew, а напрямую через gradle
-      - name: Build with Gradle
+      - name: Build APK
         run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: GymMaster_Glavar_Edition
-          path: android/build/outputs/apk/debug/*.apk
+          path: "**/*.apk"
           
