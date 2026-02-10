@@ -1,6 +1,6 @@
-rootProject.name = 'GymMasterProject'
-
-// Подключаем модули
-include 'core'
-include 'admin'
-include 'student'
+rootProject.name = 'GymMasterUltra'
+include ':core'          // Мозги (почта gglgogaz1989@gmail.com, логика VIP)
+include ':common-ui'    // Элитный дизайн, градиенты, кнопки
+include ':android'      // Сборка для Андроид
+include ':ios'          // Сборка для Айфона
+include ':desktop'      // Сборка для ПК (Windows/Mac)
