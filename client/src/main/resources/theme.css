@@ -1,0 +1,23 @@
+package com.gym.client;
+
+import com.gym.core.User;
+import javafx.animation.FadeTransition;
+import javafx.util.Duration;
+
+public class Effects {
+    public void startFire(User creator) {
+        if (!creator.role.equals("CREATOR")) return;
+
+        System.out.println("🔥 СОЗДАТЕЛЬ ЖЖЕТ! Спавн 100 эмодзи...");
+        for (int i = 0; i < 100; i++) {
+            // Здесь создается объект Emoji, который летает по экрану
+            // animation.play(); 
+        }
+    }
+    
+    public void startCameraAndRig() {
+        System.out.println("📸 Камера: ON. Микрофон: ON.");
+        System.out.println("🔍 Анализ рига: /|\\ /\\ ... Начинай упражнение!");
+    }
+        }
+      
