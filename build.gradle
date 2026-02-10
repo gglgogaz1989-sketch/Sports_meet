@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    group = 'com.gym'
+    version = '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral() // Отсюда скачаются библиотеки для чата и Google входа
+    }
+}
+
+dependencies {
+    // Общие библиотеки, например для JSON
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
