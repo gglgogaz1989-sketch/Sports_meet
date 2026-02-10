@@ -1,17 +1,14 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
-allprojects {
-    group = 'com.gym'
-    version = '1.0-SNAPSHOT'
-
-    repositories {
-        mavenCentral() // Отсюда скачаются библиотеки для чата и Google входа
+subprojects {
+    apply plugin: 'java'
+    repositories { mavenCentral() }
+    dependencies {
+        // Библиотеки для видео-звонков и ИИ (MediaPipe)
+        implementation 'com.google.mediapipe:tasks-vision:0.10.0'
+        implementation 'io.github.webrtc-sdk:android:104.5112.03'
     }
-}
-
-dependencies {
-    // Общие библиотеки, например для JSON
-    implementation 'com.google.code.gson:gson:2.10.1'
 }
