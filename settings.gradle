@@ -1,0 +1,6 @@
+rootProject.name = 'GymMasterProject'
+
+// Подключаем модули
+include 'core'
+include 'admin'
+include 'student'
